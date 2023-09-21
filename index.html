@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <main>
+        <div class="color-changer">
+            <p>Mezők Száma</p>
+            <input oninput="SetCellCount()" id="cell-count" value="2" type="range" min="2" max="10">
+            <label for="cell-count" id="count-label">2</label>
+            <p>Mezők Mérete</p>
+            <input oninput="SetCellSize()" id="cell-size" value="30" type="range" min="30" max="100">
+            <label for="cell-size" id="size-label">30</label>
+            <br>
+            <button onclick="GenerateBoard()">Generate</button>
+        </div>
+        <div class="chess-board" id="chess-board"></div>
+    </main>
+</body>
+<script src="main.js"></script>
+</html>
